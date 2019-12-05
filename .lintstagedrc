@@ -1,0 +1,6 @@
+{
+  "**/*.{js,jsx,ts,tsx}": [
+    "yarn pretty",
+    "git add"
+  ]
+}
