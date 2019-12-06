@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Layout = styled.ul`
+const Container = styled.ul`
   cursor: default;
   list-style: none;
   margin-top: -0.675em;
@@ -9,7 +9,7 @@ const Layout = styled.ul`
   padding-left: 0;
 `;
 
-const IconContainer = styled.li`
+const Row = styled.li`
   display: flex;
   justify-content: space-around;
   padding: 0.675em 0.5em;
@@ -61,8 +61,8 @@ const Icon = styled.a`
 
 const Icons: React.FC = () => {
   return (
-    <Layout>
-      <IconContainer>
+    <Container>
+      <Row>
         <Icon
           className="fab fa-github"
           href="https://github.com/chrisarevir/"
@@ -79,8 +79,8 @@ const Icons: React.FC = () => {
           className="fab fa-linkedin"
           href="https://www.linkedin.com/in/chrisarevir/"
         />
-      </IconContainer>
-    </Layout>
+      </Row>
+    </Container>
   );
 };
 
