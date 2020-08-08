@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Transition } from 'react-transition-group';
 import { TransitionStatus } from 'react-transition-group/Transition';
 
@@ -23,9 +23,30 @@ const Card = styled.section<{ state?: TransitionStatus }>`
     state === 'entering' || state === 'entered' ? 0 : 1};
   transform: translateX(-50%) translateY(-50%)
     rotateX(
-      ${({ state }) =>
-        state === 'entering' || state === 'entered' ? 15 : 0}deg
+      ${({ state }) => {
+        if (state === 'entering' || state === 'entered') {
+          return 15;
+        }
+
+        return 0;
+      }}deg
+    )
+    rotateY(
+      ${({ state }) => {
+        if (state === 'exiting' || state === 'exited') {
+          return 0;
+        }
+        return 90;
+      }}deg
     );
+
+  ${({ state }) => {
+    if (state === 'exiting') {
+      return css`
+        transform: rotateY(180deg);
+      `;
+    }
+  }}
 `;
 
 const AnimatedCard: React.FC = ({ children }) => {

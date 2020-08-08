@@ -8,14 +8,26 @@ const P = styled.p`
   margin: 0 0 1.5em 0;
 `;
 
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 1.5em 0;
+`;
+
 const About: React.FC = () => {
+  // TODO: make animation for hey hi hello to slide, spin, and slam in
   return (
     <Card>
       <H1>About Me</H1>
 
       <P>
-        Take my hand heaven banana quinoa muffin we both. Went mad for me I
-        think red. Lipstick the road I am finally clean monsters burn.
+        Heyhihello!
+        <Ul>
+          <li>Photographer</li>
+          <li title="I designed this site myself!">Dabbles in Design</li>
+          <li>Loves building components</li>
+        </Ul>
       </P>
     </Card>
   );
