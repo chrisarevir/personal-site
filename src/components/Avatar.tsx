@@ -33,7 +33,7 @@ const Image = styled.img`
 const Avatar: React.FC = () => {
   return (
     <Container>
-      <Image src={avatar} />
+      <Image src={avatar} alt="profile photo for Christian Rivera" />
     </Container>
   );
 };

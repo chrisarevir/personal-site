@@ -11,7 +11,7 @@ const BackgroundImage = styled.img`
 `;
 
 const Forest: React.FC = () => {
-  return <BackgroundImage src={forest} />;
+  return <BackgroundImage src={forest} alt="forest" />;
 };
 
 export default Forest;

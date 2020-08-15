@@ -16,7 +16,7 @@ const Card = styled.section<{ state?: TransitionStatus }>`
   top: 50%;
   transform-origin: 50% 50%;
   transition: opacity 1s ease, transform 1s ease;
-  width: 27em;
+  min-width: 27em;
   z-index: 2;
 
   opacity: ${({ state }) =>
