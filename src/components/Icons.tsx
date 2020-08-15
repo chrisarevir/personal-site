@@ -11,18 +11,20 @@ const Container = styled.ul`
 
 const Row = styled.li`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0.675em 0.5em;
+  padding: 0 0.5em;
   width: 100%;
 `;
 
 const Icon = styled.a`
-  color: inherit;
   border-radius: 100%;
   border: solid 1px #c8cccf;
+  color: inherit;
   display: block;
   height: 3.75em;
   line-height: 3.75em;
+  margin-top: 0.675em;
   overflow: hidden;
   position: relative;
   text-align: center;

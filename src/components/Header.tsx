@@ -24,6 +24,10 @@ const Header = styled.header`
   a + a {
     margin-left: 20px;
   }
+
+  @media (max-width: 450px) {
+    bottom: 0;
+  }
 `;
 
 export default Header;

@@ -47,6 +47,17 @@ const Card = styled.section<{ state?: TransitionStatus }>`
       `;
     }
   }}
+
+  @media (max-width: 450px) {
+    bottom: 48px;
+    left: 0;
+    max-height: calc(100vh - 48px);
+    min-width: 0;
+    overflow: auto;
+    top: unset;
+    transform-origin: unset;
+    transform: unset;
+  }
 `;
 
 const AnimatedCard: React.FC = ({ children }) => {
