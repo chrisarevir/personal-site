@@ -1,19 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Card from './Card';
 import H1 from './H1';
-
-const P = styled.p`
-  text-transform: initial;
-  margin: 0 0 1.5em 0;
-  line-height: 1.5em;
-  text-align: left;
-
-  & + & {
-    margin-top: 1.5em;
-  }
-`;
+import { P, TextAlignLeft } from './Typography';
 
 const About: React.FC = () => {
   // TODO: make animation for hey hi hello to slide, spin, and slam in
@@ -21,30 +10,42 @@ const About: React.FC = () => {
     <Card>
       <H1>About Me</H1>
 
-      <P>Heyhihello!</P>
-      <P>
-        I've always been one to tinker with everything, and the web is my
-        current playground of choice. My career has brought me from mobile work,
-        through backend, and am currently focused on frontend web work. Tending
-        to not wait for permission or tipping points to fix things, and
-        paraphrasing Kent Metz, I make the hard changes easy, then make easy
-        changes.
-      </P>
-      <P>
-        Presently, my full time job focuses on creating and maintaining a
-        reusable library of components / utilities, as well as acting as a
-        Jack-of-All-Trades resource on various frontend arcanas, and tend to
-        pick out the right tool for the job rather than the one that has the
-        most hype. I act as technical support, provide guidance and mentorship
-        for new hires and interns, and code like Hamilton writes (non-stop).
-      </P>
+      <TextAlignLeft>
+        <P>Heyhihello!</P>
+        <P>
+          I've always been one to tinker with everything, and the web is my
+          current playground of choice. My career has brought me from mobile
+          work, through backend, and is currently focused on frontend web work.
+          Tending to not wait for permission or tipping points to fix things,
+          and paraphrasing Kent Metz, I make the hard changes easy, then make
+          easy changes.
+        </P>
 
-      <P>
-        This is balanced by my love of dancing, and while the current pandemic
-        limits it, I run/fly at the opportunity to go social dancing (Lindy Hop,
-        Balboa, East Coast Swing, Line Dancing), and have performed in various
-        hip hop/swing dancing shows in / around the LA area!
-      </P>
+        <P>
+          Presently, my full time job focuses on creating and maintaining a
+          reusable library of components / utilities, as well as acting as a
+          Jack-of-All-Trades resource on various frontend arcanas. I tend to
+          pick out the right tool for the job rather after some research rather
+          than the one that has the most hype. I act as technical support,
+          provide guidance and mentorship for new hires and interns, and code
+          like Hamilton writes (
+          <a
+            href="https://www.youtube.com/watch?v=q9iLfPP4Ps8"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            non-stop
+          </a>
+          ).
+        </P>
+
+        <P>
+          While limited by the current pandemic, I usually balance this out by
+          going / flying to various social dancing events (Lindy Hop, Balboa,
+          East Coast Swing, Line Dancing), and I have performed in various hip
+          hop / swing dancing shows in and around the LA area!
+        </P>
+      </TextAlignLeft>
     </Card>
   );
 };
