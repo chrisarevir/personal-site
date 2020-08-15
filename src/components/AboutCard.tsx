@@ -25,10 +25,10 @@ const About: React.FC = () => {
           Presently, my full time job focuses on creating and maintaining a
           reusable library of components / utilities, as well as acting as a
           Jack-of-All-Trades resource on various frontend arcanas. I tend to
-          pick out the right tool for the job rather after some research rather
-          than the one that has the most hype. I act as technical support,
-          provide guidance and mentorship for new hires and interns, and code
-          like Hamilton writes (
+          pick out the right tool for the job after some research rather than
+          the one that has the most hype. I act as technical support, provide
+          guidance and mentorship for new hires and interns, and code like
+          Hamilton writes (
           <a
             href="https://www.youtube.com/watch?v=q9iLfPP4Ps8"
             rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const About: React.FC = () => {
           While limited by the current pandemic, I usually balance this out by
           going / flying to various social dancing events (Lindy Hop, Balboa,
           East Coast Swing, Line Dancing), and I have performed in various hip
-          hop / swing dancing shows in and around the LA area!
+          hop and swing dancing shows in and around the LA area!
         </P>
       </TextAlignLeft>
     </Card>
