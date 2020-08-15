@@ -17,7 +17,7 @@ const About: React.FC = () => {
           current playground of choice. My career has brought me from mobile
           work, through backend, and is currently focused on frontend web work.
           Tending to not wait for permission or tipping points to fix things,
-          and paraphrasing Kent Metz, I make the hard changes easy, then make
+          and paraphrasing Kent Beck, I make the hard changes easy, then make
           easy changes.
         </P>
 
