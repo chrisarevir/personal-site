@@ -9,7 +9,9 @@ const Card = styled.section<{ state?: TransitionStatus }>`
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
   cursor: default;
   left: 50%;
+  max-height: calc(100vh - 108px);
   max-width: 100%;
+  overflow: auto;
   padding: 4.5em 3em 3em 3em;
   position: absolute;
   text-align: center;
@@ -51,9 +53,7 @@ const Card = styled.section<{ state?: TransitionStatus }>`
   @media (max-width: 450px) {
     bottom: 48px;
     left: 0;
-    max-height: calc(100vh - 108px);
     min-width: 0;
-    overflow: auto;
     top: unset;
     transform-origin: unset;
     transform: unset;
