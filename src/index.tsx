@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './styles/reset.css';
-import * as serviceWorker from './utils/serviceWorker';
-
-import Header from './components/Header';
-import Forest from './components/Forest';
-import Gradient from './components/Gradient';
-import ProfileCard from './components/ProfileCard';
-import AboutCard from './components/AboutCard';
-
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   NavLink,
+  Route,
+  Switch,
 } from 'react-router-dom';
 import styled from 'styled-components';
+import AboutCard from './components/AboutCard';
+import Card from './components/Card';
+import Forest from './components/Forest';
+import Gradient from './components/Gradient';
+import H1 from './components/H1';
+import Header from './components/Header';
+import ProfileCard from './components/ProfileCard';
+import Blog from './pages/Blog';
+import './styles/reset.css';
+import * as serviceWorker from './utils/serviceWorker';
 
 const Link = styled(NavLink)`
   text-decoration: none;
@@ -40,19 +40,18 @@ const Site = () => {
       <Header>
         <Link to="/personal-site">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/blog">Blahg</Link>
       </Header>
 
       <Forest />
       <Gradient />
 
       <Switch>
-        <Route exact path="/personal-site">
-          <ProfileCard />
-        </Route>
+        <Route exact path="/personal-site" component={ProfileCard} />
 
-        <Route exact path="/about">
-          <AboutCard />
-        </Route>
+        <Route exact path="/about" component={AboutCard} />
+
+        <Route path="/blog" component={Blog} />
       </Switch>
     </Router>
   );
