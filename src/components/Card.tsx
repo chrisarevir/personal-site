@@ -51,9 +51,11 @@ const Card = styled.section<{ state?: TransitionStatus }>`
   }}
 
   @media (max-width: 450px) {
+    border-radius: 10px 10px 0 0;
     bottom: 48px;
     left: 0;
     min-width: 0;
+    width: 100%;
     top: unset;
     transform-origin: unset;
     transform: unset;

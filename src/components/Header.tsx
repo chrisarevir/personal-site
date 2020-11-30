@@ -14,11 +14,6 @@ const Header = styled.header`
 
   a {
     color: white;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 
   a + a {

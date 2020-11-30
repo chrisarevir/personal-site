@@ -10,7 +10,29 @@ import Gradient from './components/Gradient';
 import ProfileCard from './components/ProfileCard';
 import AboutCard from './components/AboutCard';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from 'react-router-dom';
+import styled from 'styled-components';
+
+const Link = styled(NavLink)`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.active {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
 
 const Site = () => {
   return (
