@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Card from '../components/Card';
 import H1 from '../components/H1';
 import { P, TextAlignLeft } from '../components/Typography';
-const matrixEffect = require('../projects/matrixEffect.js');
+import MatrixEffect from '../projects/matrixEffect.js';
 
 const MatrixEffectContainer = styled.div`
   align-items: center;
@@ -59,7 +59,7 @@ const lines = [
 const MatrixTextProject = () => {
   React.useEffect(() => {
     const node = document.querySelector('.text');
-    const runner = new matrixEffect(node);
+    const runner = new MatrixEffect(node);
 
     runner.run(lines);
   }, []);

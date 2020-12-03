@@ -3,6 +3,9 @@ class MatrixEffect {
     this.el = el;
     this.chars = '!<>-_\\/[]{}—=+*^?#________';
     this.update = this.update.bind(this);
+    this.run = this.run.bind(this);
+    this.randomChar = this.randomChar.bind(this);
+    this.setText = this.setText.bind(this);
   }
 
   randomChar() {
@@ -70,4 +73,4 @@ class MatrixEffect {
   }
 }
 
-module.exports = MatrixEffect;
+export default MatrixEffect;
