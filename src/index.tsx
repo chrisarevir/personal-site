@@ -8,10 +8,8 @@ import {
 } from 'react-router-dom';
 import styled from 'styled-components';
 import AboutCard from './components/AboutCard';
-import Card from './components/Card';
 import Forest from './components/Forest';
 import Gradient from './components/Gradient';
-import H1 from './components/H1';
 import Header from './components/Header';
 import ProfileCard from './components/ProfileCard';
 import Blog from './pages/Blog';
