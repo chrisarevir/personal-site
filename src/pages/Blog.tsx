@@ -18,7 +18,7 @@ const Story = () => {
         </P>
 
         <P>
-          It integrates very well if you start diong themes and the like, and it
+          It integrates very well if you start doing themes and the like, and it
           is fairly easy to make an IDE render the backtick-ed rules closer to
           css.
         </P>
@@ -30,7 +30,7 @@ const Story = () => {
 const DefaultBlogPage: React.FC<RouteComponentProps> = ({ match }) => {
   return (
     <Card>
-      <H1>Blahg</H1>
+      <H1>Blog</H1>
       <TextAlignLeft>
         <P>
           Hello, I would like to build a relationship with my readers, thank
@@ -39,7 +39,7 @@ const DefaultBlogPage: React.FC<RouteComponentProps> = ({ match }) => {
 
         <ul>
           <li>
-            <Link to={`${match.url}/jss`}>Story</Link>
+            <Link to={`${match.url}/jss`}>JSS Thoughts</Link>
           </li>
         </ul>
       </TextAlignLeft>
