@@ -13,6 +13,7 @@ import Gradient from './components/Gradient';
 import Header from './components/Header';
 import ProfileCard from './components/ProfileCard';
 import Blog from './pages/Blog';
+import Projects from './pages/Projects';
 import './styles/reset.css';
 import * as serviceWorker from './utils/serviceWorker';
 
@@ -38,6 +39,7 @@ const Site = () => {
       <Header>
         <Link to="/personal-site">Home</Link>
         <Link to="/about">About</Link>
+        {/* <Link to="/projects">Projects</Link> */}
         {/* TODO: Actually write an article here and unhide this */}
         {/* <Link to="/blog">Blahg</Link> */}
       </Header>
@@ -47,9 +49,8 @@ const Site = () => {
 
       <Switch>
         <Route exact path="/personal-site" component={ProfileCard} />
-
-        <Route exact path="/about" component={AboutCard} />
-
+        <Route exact path="/about" component={AboutCard} />=
+        <Route path="/projects" component={Projects} />
         <Route path="/blog" component={Blog} />
       </Switch>
     </Router>
