@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Avatar from '../components/Avatar';
-import Icons from '../components/Icons';
-import Card from '../components/Card';
-import H1 from '../components/H1';
+import { Avatar } from '../components/Avatar';
+import { Icons } from '../components/Icons';
+import { AnimatedCard } from '../components/Card';
+import { H1 } from '../components/H1';
 import { P } from '../components/Typography';
 
-const ProfileCard: React.FC = () => {
+export const ProfileCard: React.FC = () => {
   return (
-    <Card>
+    <AnimatedCard>
       <header>
         <Avatar />
         <H1>Christian Rivera</H1>
@@ -17,8 +17,6 @@ const ProfileCard: React.FC = () => {
       <footer>
         <Icons />
       </footer>
-    </Card>
+    </AnimatedCard>
   );
 };
-
-export default ProfileCard;

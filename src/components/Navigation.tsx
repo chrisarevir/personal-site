@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Header = styled.header`
+export const Navigation = styled.nav`
   align-items: center;
   justify-content: flex-start;
   background: rgba(0, 0, 0, 0.5);
@@ -24,5 +24,3 @@ const Header = styled.header`
     bottom: 0;
   }
 `;
-
-export default Header;

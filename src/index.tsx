@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import AboutCard from './components/AboutCard';
-import Forest from './components/Forest';
-import Gradient from './components/Gradient';
-import Header from './components/Header';
-import ProfileCard from './components/ProfileCard';
-import Blog from './pages/Blog';
-import Projects from './pages/Projects';
+import { AboutCard } from './components/AboutCard';
+import { Forest } from './components/Forest';
+import { Gradient } from './components/Gradient';
+import { Navigation } from './components/Navigation';
+import { ProfileCard } from './components/ProfileCard';
+import { Blog } from './pages/Blog';
+import { Projects } from './pages/Projects';
 import './styles/reset.css';
 import * as serviceWorker from './utils/serviceWorker';
 
@@ -31,13 +31,19 @@ const Link = styled(NavLink)`
 const Site = () => {
   return (
     <Router>
-      <Header>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
+      <Navigation>
+        <Link exact to="/">
+          Home
+        </Link>
+        <Link exact to="/about">
+          About
+        </Link>
+        <Link exact to="/projects">
+          Projects
+        </Link>
         {/* TODO: Actually write an article here and unhide this */}
         {/* <Link to="/blog">Blahg</Link> */}
-      </Header>
+      </Navigation>
 
       <Forest />
       <Gradient />

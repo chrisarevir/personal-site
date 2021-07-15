@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, Route, RouteComponentProps, Switch } from 'react-router-dom';
-import Card from '../components/Card';
-import H1 from '../components/H1';
+import { AnimatedCard } from '../components/Card';
+import { H1 } from '../components/H1';
 import { P, TextAlignLeft } from '../components/Typography';
 
 const Story = () => {
   return (
-    <Card>
+    <AnimatedCard>
       <H1>Thoughts on JSS</H1>
       <TextAlignLeft>
         <P>
@@ -23,13 +23,13 @@ const Story = () => {
           css.
         </P>
       </TextAlignLeft>
-    </Card>
+    </AnimatedCard>
   );
 };
 
 const DefaultBlogPage: React.FC<RouteComponentProps> = ({ match }) => {
   return (
-    <Card>
+    <AnimatedCard>
       <H1>Blog</H1>
       <TextAlignLeft>
         <P>
@@ -43,11 +43,11 @@ const DefaultBlogPage: React.FC<RouteComponentProps> = ({ match }) => {
           </li>
         </ul>
       </TextAlignLeft>
-    </Card>
+    </AnimatedCard>
   );
 };
 
-const Blog: React.FC = () => {
+export const Blog: React.FC = () => {
   return (
     <Switch>
       <Route path="/blog/jss" component={Story} />
@@ -55,5 +55,3 @@ const Blog: React.FC = () => {
     </Switch>
   );
 };
-
-export default Blog;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Gradient = styled.div`
+export const Gradient = styled.div`
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
   height: 100vh;
   opacity: 0.2;
@@ -8,5 +8,3 @@ const Gradient = styled.div`
   position: absolute;
   z-index: 1;
 `;
-
-export default Gradient;

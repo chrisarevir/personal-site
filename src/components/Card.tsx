@@ -62,7 +62,7 @@ const Card = styled.section<{ state?: TransitionStatus }>`
   }
 `;
 
-const AnimatedCard: React.FC = ({ children }) => {
+export const AnimatedCard: React.FC = ({ children }) => {
   const [animate, setAnimate] = React.useState(true);
 
   React.useEffect(() => {
@@ -79,5 +79,3 @@ const AnimatedCard: React.FC = ({ children }) => {
     </Transition>
   );
 };
-
-export default AnimatedCard;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import Card from '../components/Card';
-import H1 from '../components/H1';
+import { AnimatedCard } from '../components/Card';
+import { H1 } from '../components/H1';
 import { P, TextAlignLeft } from '../components/Typography';
 import MatrixEffect from '../projects/matrixEffect.js';
 
@@ -111,9 +111,9 @@ const DefaultProjectPage: React.FC<RouteComponentProps> = ({ match }) => {
   );
 };
 
-const Project: React.FC = () => {
+export const Projects: React.FC = () => {
   return (
-    <Card>
+    <AnimatedCard>
       <Switch>
         <Route
           path="/projects/matrixy-text-effect"
@@ -121,8 +121,6 @@ const Project: React.FC = () => {
         />
         <Route path="/projects" component={DefaultProjectPage} />
       </Switch>
-    </Card>
+    </AnimatedCard>
   );
 };
-
-export default Project;

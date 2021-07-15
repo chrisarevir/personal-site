@@ -30,12 +30,10 @@ const Image = styled.img`
   width: 122px;
 `;
 
-const Avatar: React.FC = () => {
+export const Avatar: React.FC = () => {
   return (
     <Container>
       <Image src={avatar} alt="profile photo for Christian Rivera" />
     </Container>
   );
 };
-
-export default Avatar;

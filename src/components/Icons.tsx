@@ -61,7 +61,7 @@ const Icon = styled.a`
   }
 `;
 
-const Icons: React.FC = () => {
+export const Icons: React.FC = () => {
   return (
     <Container>
       <Row>
@@ -85,5 +85,3 @@ const Icons: React.FC = () => {
     </Container>
   );
 };
-
-export default Icons;
