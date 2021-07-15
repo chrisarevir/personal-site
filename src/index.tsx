@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { HashRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import AboutCard from './components/AboutCard';
 import Forest from './components/Forest';
@@ -37,7 +32,7 @@ const Site = () => {
   return (
     <Router>
       <Header>
-        <Link to="/personal-site">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
         {/* TODO: Actually write an article here and unhide this */}
@@ -48,7 +43,7 @@ const Site = () => {
       <Gradient />
 
       <Switch>
-        <Route exact path="/personal-site" component={ProfileCard} />
+        <Route exact path="/" component={ProfileCard} />
         <Route exact path="/about" component={AboutCard} />=
         <Route path="/projects" component={Projects} />
         <Route path="/blog" component={Blog} />
