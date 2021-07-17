@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import { AnimatedCard } from '../components/Card';
-import { H1 } from '../components/H1';
-import { P, TextAlignLeft } from '../components/Typography';
+import { H1, P, TextAlignLeft } from '../components/Typography';
 import MatrixEffect from '../projects/matrixEffect.js';
 
 const MatrixEffectContainer = styled.div`
@@ -97,7 +96,7 @@ const DefaultProjectPage: React.FC<RouteComponentProps> = ({ match }) => {
     <React.Fragment>
       <H1>Projects</H1>
       <TextAlignLeft>
-        <P>Some projects I'm kind of proud of or something</P>
+        <P>Some neat projects I've worked on</P>
 
         <ul>
           <li>

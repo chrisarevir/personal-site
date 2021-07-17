@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import { AnimatedCard } from '../components/Card';
-import { H1 } from '../components/H1';
-import { P, TextAlignLeft } from '../components/Typography';
+import { H1, P, TextAlignLeft } from '../components/Typography';
 
 const Story = () => {
   return (

@@ -3,8 +3,7 @@ import React from 'react';
 import { Avatar } from '../components/Avatar';
 import { Icons } from '../components/Icons';
 import { AnimatedCard } from '../components/Card';
-import { H1 } from '../components/H1';
-import { P } from '../components/Typography';
+import { H1, P } from '../components/Typography';
 
 export const ProfileCard: React.FC = () => {
   return (

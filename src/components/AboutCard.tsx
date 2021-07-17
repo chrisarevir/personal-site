@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { AnimatedCard } from './Card';
-import { H1 } from './H1';
-import { P, TextAlignLeft } from './Typography';
+import { H1, P, TextAlignLeft } from './Typography';
 
 export const AboutCard: React.FC = () => {
   // TODO: make animation for hey hi hello to slide, spin, and slam in
