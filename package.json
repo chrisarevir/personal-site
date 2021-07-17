@@ -11,7 +11,8 @@
     "predeploy": "yarn build",
     "pretty": "prettier --write",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,13 +37,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook --colors || true"
     }
   },
   "dependencies": {
@@ -74,5 +68,8 @@
     "husky": "7.0.1",
     "lint-staged": "11.0.1",
     "prettier": "2.3.2"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
