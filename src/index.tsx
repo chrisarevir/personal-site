@@ -38,9 +38,7 @@ const Site = () => {
         <Link exact to="/about">
           About
         </Link>
-        <Link exact to="/projects">
-          Projects
-        </Link>
+        <Link to="/projects">Projects</Link>
         {/* TODO: Actually write an article here and unhide this */}
         {/* <Link to="/blog">Blahg</Link> */}
       </Navigation>
