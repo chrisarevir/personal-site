@@ -2,13 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import { AboutCard } from './components/AboutCard';
 import { Forest } from './components/Forest';
 import { Gradient } from './components/Gradient';
 import { Navigation } from './components/Navigation';
-import { ProfileCard } from './components/ProfileCard';
-import { Blog } from './pages/Blog';
-import { Projects } from './pages/Projects';
 import './styles/reset.css';
 import * as serviceWorker from './utils/serviceWorker';
 
@@ -28,6 +24,30 @@ const Link = styled(NavLink)`
   }
 `;
 
+const ProfileCard = React.lazy(() =>
+  import('./components/ProfileCard').then((module) => ({
+    default: module.ProfileCard,
+  }))
+);
+
+const AboutCard = React.lazy(() =>
+  import('./components/AboutCard').then((module) => ({
+    default: module.AboutCard,
+  }))
+);
+
+const Projects = React.lazy(() =>
+  import('./pages/Projects').then((module) => ({
+    default: module.Projects,
+  }))
+);
+
+const Blog = React.lazy(() =>
+  import('./pages/Blog').then((module) => ({
+    default: module.Blog,
+  }))
+);
+
 const Site = () => {
   return (
     <Router>
@@ -46,12 +66,14 @@ const Site = () => {
       <Forest />
       <Gradient />
 
-      <Switch>
-        <Route exact path="/" component={ProfileCard} />
-        <Route exact path="/about" component={AboutCard} />=
-        <Route path="/projects" component={Projects} />
-        <Route path="/blog" component={Blog} />
-      </Switch>
+      <React.Suspense fallback={''}>
+        <Switch>
+          <Route exact path="/" component={ProfileCard} />
+          <Route exact path="/about" component={AboutCard} />=
+          <Route path="/projects" component={Projects} />
+          <Route path="/blog" component={Blog} />
+        </Switch>
+      </React.Suspense>
     </Router>
   );
 };
