@@ -11,7 +11,7 @@ export const ProfileCard: React.FC = () => {
       <header>
         <Avatar />
         <H1>Christian Rivera</H1>
-        <P>Senior Web Developer</P>
+        <P>Staff Web Developer</P>
       </header>
       <footer>
         <Icons />
